@@ -17,6 +17,7 @@ GNU LESSER GENERAL PUBLIC LICENSE for more details.
 You should have received a copy of the GNU LESSER GENERAL PUBLIC LICENSE
 along with EBU-content-manager.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,7 +66,9 @@ namespace ContentManager.GUI
             
             //Init core
             core = ContentManagerCore.getInstance();
+
             
+
             InitializeComponent();
             Instance = this;
             this.Topmost = false;
@@ -316,6 +319,15 @@ namespace ContentManager.GUI
 
         private void Window_Closed(object sender, EventArgs e)
         {
+
+            if (Directory.Exists(CMSConfig.video_tmpfolder))
+            {
+                var v = Directory.EnumerateFiles(CMSConfig.video_tmpfolder);
+                foreach (var f in v) 
+                    File.Delete(f);
+                Directory.Delete(CMSConfig.video_tmpfolder);
+            }
+
             Environment.Exit(0);
         }
 
@@ -449,6 +461,12 @@ namespace ContentManager.GUI
             }
                
             
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            UIVideoCapture videoCapture = new UIVideoCapture(this);
+            videoCapture.Show();
         }
     }
 }

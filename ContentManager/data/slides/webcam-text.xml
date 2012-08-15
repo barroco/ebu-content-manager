@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- 
 	This file is part of the project Content Manager
 	developed by European Broadcasting Union. 
@@ -7,19 +7,18 @@
 	
 -->
 <sequence>
-  <slide>
-    
+	<slide>
 
-	<img src="@@@WEBCAM_PIC@@@" height="240"/>
 
-	<background width="280" height="20" top="10" color="#ffffff" opacity="80" left="0"/>
-	<text content="Live from European Parliament, Brussels" font-size="14" left="10" font-family="Helvetica" font-color="#CC0000" font-style="bold" top="12"/>
+		<img src="@@@WEBCAM_PIC@@@" height="240"/>
 
-	<background color="#ffffff" width="320" height="45" bottom="0" left="0" opacity="60"/>
-	<text content="@@@WEBCAM_TEXT@@@" width="240" right="5" top="200" font-size="16" font-family="Helvetica" font-style="italic bold" font-color="#333333" text-align="center"/>
-	<img src="medias/img/ebu-logo.png" width="40" bottom="5" left="5"/>
-	<img src="medias/img/EP-logo.png" bottom="5" left="50" width="40"/>
-	<text content="@@@TIME@@@" right="5" bottom="0" font-size="11" font-family="Helvetica" font-style="bold" font-color="#333333" text-align="center"/>
-	
-		  </slide>
+		<background width="280" height="20" top="10" color="#ffffff" opacity="80" left="0"/>
+		<text content="Live from European Parliament, Brussels" font-size="14" left="10" font-family="Helvetica" font-color="#CC0000" font-style="bold" top="12"/>
+
+		<background color="#ffffff" width="320" height="45" bottom="0" left="0" opacity="60"/>
+		<text content="@@@WEBCAM_TEXT@@@" width="240" right="5" top="200" font-size="16" font-family="Helvetica" font-style="italic bold" font-color="#333333" text-align="center"/>
+
+		<text content="@@@TIME@@@" right="5" bottom="0" font-size="11" font-family="Helvetica" font-style="bold" font-color="#333333" text-align="center"/>
+
+	</slide>
 </sequence>

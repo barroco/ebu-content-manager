@@ -345,7 +345,7 @@ namespace SlideGeneratorLib
 
         public void saveToJpg(UIElement source, String filename, String link="", int quality=100)
         {
-            this.saveToJpg(source, filename, link, true, quality);
+            saveToJpg(source, filename, link, true, quality);
             /*
             source.Measure(new System.Windows.Size(320.0, 240.0));
             source.Arrange(new System.Windows.Rect(0.0, 0.0, 320.0, 240.0));
@@ -380,7 +380,7 @@ namespace SlideGeneratorLib
             EncoderParameter qualityParam = new EncoderParameter(Encoder.Quality, quality);
 
             // Jpeg image codec
-            ImageCodecInfo jpegCodec = this.getEncoderInfo("image/jpeg");
+            ImageCodecInfo jpegCodec = getEncoderInfo("image/jpeg");
 
             if (jpegCodec == null)
                 return;
@@ -391,7 +391,7 @@ namespace SlideGeneratorLib
             img.Save(path, jpegCodec, encoderParams);
         }
 
-        private ImageCodecInfo getEncoderInfo(string mimeType)
+        private static ImageCodecInfo getEncoderInfo(string mimeType)
         {
             // Get image codecs for all image formats
             ImageCodecInfo[] codecs = ImageCodecInfo.GetImageEncoders();
@@ -403,7 +403,7 @@ namespace SlideGeneratorLib
             return null;
         }
 
-        public void saveToJpg(UIElement source, string filename, String link, bool include_exif, int quality=100)
+        public static void saveToJpg(UIElement source, string filename, String link, bool include_exif, int quality=100)
         {
             RenderOptions.SetEdgeMode(source, EdgeMode.Aliased);
             RenderOptions.SetBitmapScalingMode(source, BitmapScalingMode.HighQuality);
@@ -486,7 +486,7 @@ namespace SlideGeneratorLib
                 Console.WriteLine("Error writting files\n"+e.Message);
             }*/
         }
-        private ImageCodecInfo GetEncoder(ImageFormat format)
+        private static ImageCodecInfo GetEncoder(ImageFormat format)
         {
 
             ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();
