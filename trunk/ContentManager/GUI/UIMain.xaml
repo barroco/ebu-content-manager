@@ -125,9 +125,13 @@
                 <MenuItem Header="Reload Carts" Foreground="Black" Click="Button_Click_6"/>                
             </MenuItem>
             <MenuItem Header="Templates" x:Name="templatesMenu"></MenuItem>
+            <MenuItem Header="Capture">
+                <MenuItem Header="Video Stream" Foreground="Black" Click="MenuItem_Click_1"/>                
+            </MenuItem>
             <MenuItem Header="Help">
                 <MenuItem Header="About" Foreground="Black" Click="MenuItem_Click" Padding="0" />
             </MenuItem>
+            
         </Menu>
         <Label Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" x:Name="labelAbout" Foreground="White" Content="EBU Content Manager - www.ebulabs.org - version: " HorizontalAlignment="Right"/>
         <Grid Background="Black" Grid.Row="1" Grid.RowSpan="2">
@@ -168,7 +172,7 @@
             <!-- <Button Content="Refresh Available slides" HorizontalAlignment="Left" Margin="332,9,0,0" Width="130" Grid.Row="1" Click="Button_Click_2" Height="42" VerticalAlignment="Top" />-->
             <Button Content="Show log file" Margin="654,0,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130" Click="Button_Click_1" />
             <frm:OnAirCart x:Name="onaircart" Grid.Row="1" Grid.ColumnSpan="2" Margin="40,38,54,27" />
-            <Image Source="/ContentManager;component/Images/ebu-logo-bn.png" Height="102" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="113" Grid.Row="3" Margin="20,0,0,37" />
+            <Image  Height="102" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="113" Grid.Row="3" Margin="20,0,0,37" Source="/ContentManagerService;component/Images/ebu-logo-bn.png" />
             <TextBlock Text="ebulabs.org" Style="{StaticResource BannerInlayText}" Grid.Row="3" Margin="20,0,0,4" Height="21" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="113" FontSize="13" TextAlignment="Center"/>
             <frm:UIHotVarCart Grid.Row="2" Margin="46,48,54,27" x:Name="hotvars" Grid.Column="1" Grid.RowSpan="2" />
             <Rectangle Fill="{x:Null}" Grid.Row="2" Grid.RowSpan="2" Margin="26,10,36,10" RadiusX="20" RadiusY="20" Stretch="Fill" Stroke="#FFAAAAAA" StrokeThickness="2" Grid.Column="1" />

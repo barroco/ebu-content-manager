@@ -57,6 +57,10 @@ namespace XMLConfig.CMS
         public static String dirwatch = "";
         public static int ep_quality=50;
 
+
+        // GLOBAL VARIABLES
+        public static String video_tmpfolder = "tmp-video";
+
         public static void print()
         {
 

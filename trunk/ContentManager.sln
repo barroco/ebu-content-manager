@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kayak", "kayak-kayak-f3fb78
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLConfig", "XMLConfig\XMLConfig.csproj", "{DE526998-D6B6-4BAF-826E-0F5EE0F796BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveProducer", "LiveProducer\LiveProducer.csproj", "{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,16 @@ Global
 		{DE526998-D6B6-4BAF-826E-0F5EE0F796BB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{DE526998-D6B6-4BAF-826E-0F5EE0F796BB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{DE526998-D6B6-4BAF-826E-0F5EE0F796BB}.Release|x86.ActiveCfg = Release|Any CPU
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Debug|x86.ActiveCfg = Debug|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Debug|x86.Build.0 = Debug|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Release|Any CPU.ActiveCfg = Release|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Release|x86.ActiveCfg = Release|x86
+		{B32F26D7-D05C-42F4-8DB2-16DE53C6E567}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
