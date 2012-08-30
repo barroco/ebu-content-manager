@@ -84,14 +84,21 @@ namespace ContentManager
                 }
 
 
-                if (CMSConfig.inputtype.ToUpper() == "HTTP")
-                    this.input = new InputHTTPKayak(this);
-                else if (CMSConfig.inputtype.ToUpper() == "WCF")
-                    this.input = new InputWCF(this);
-                else
+                try
                 {
-                    MessageBox.Show("There is no InputMethod key in the configuration file", "Error: Bad Configuration");
-                    Environment.Exit(1);
+                    if (CMSConfig.inputtype.ToUpper() == "HTTP")
+                        this.input = new InputHTTPKayak(this);
+                    else if (CMSConfig.inputtype.ToUpper() == "WCF")
+                        this.input = new InputWCF(this);
+                    else
+                    {
+                        MessageBox.Show("There is no InputMethod key in the configuration file", "Error: Bad Configuration");
+                        Environment.Exit(1);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
                 }
 
                 this.engine = new BroadcastEngine(slidegen);

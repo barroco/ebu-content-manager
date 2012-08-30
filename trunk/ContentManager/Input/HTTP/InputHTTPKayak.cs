@@ -28,6 +28,7 @@ using ContentManager.GUI;
 using Kayak.Http;
 using System.Net;
 using System.Threading;
+using System.Windows;
 
 namespace ContentManager.Input.HTTP
 {
@@ -75,14 +76,23 @@ namespace ContentManager.Input.HTTP
 
         public bool start()
         {
-            using (server.Listen(new IPEndPoint(IPAddress.Any, CMSConfig.httpport)))
+            try
             {
+                using (server.Listen(new IPEndPoint(IPAddress.Any, CMSConfig.httpport)))
+                {
 
-                // runs scheduler on calling thread. this method will block until
-                // someone calls Stop() on the scheduler.
-                scheduler.Start();
+                    // runs scheduler on calling thread. this method will block until
+                    // someone calls Stop() on the scheduler.
+                    scheduler.Start();
+                }
+                return true;
             }
-            return true;
+            catch (Exception e)
+            {
+                MessageBox.Show("Error : " + e.Message);
+                
+            }
+            return false;
         }
 
         public bool stop()
