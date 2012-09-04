@@ -138,8 +138,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="350" />
                 <RowDefinition Height="219*" />
-                <RowDefinition Height="182" />
-                <RowDefinition Height="159*" />
+                <RowDefinition Height="151" />
+                <RowDefinition Height="190*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="380*"/>
@@ -172,23 +172,24 @@
             <!-- <Button Content="Refresh Available slides" HorizontalAlignment="Left" Margin="332,9,0,0" Width="130" Grid.Row="1" Click="Button_Click_2" Height="42" VerticalAlignment="Top" />-->
             <Button Content="Show log file" Margin="654,0,0,0" Height="33" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130" Click="Button_Click_1" />
             <frm:OnAirCart x:Name="onaircart" Grid.Row="1" Grid.ColumnSpan="2" Margin="40,38,54,27" />
-            <Image  Height="102" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="113" Grid.Row="3" Margin="20,0,0,37" Source="/ContentManagerService;component/Images/ebu-logo-bn.png" />
-            <TextBlock Text="ebulabs.org" Style="{StaticResource BannerInlayText}" Grid.Row="3" Margin="20,0,0,4" Height="21" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="113" FontSize="13" TextAlignment="Center"/>
+            <Image HorizontalAlignment="Left" Width="113" Grid.Row="3" Margin="20,0,0,43" Source="/ContentManagerService;component/Images/ebu-logo-bn.png" Height="102" VerticalAlignment="Bottom" />
+            <TextBlock Text="ebulabs.org" Style="{StaticResource BannerInlayText}" Grid.Row="3" Margin="20,0,0,10" HorizontalAlignment="Left" Width="113" FontSize="13" TextAlignment="Center" Height="21" VerticalAlignment="Bottom" />
             <frm:UIHotVarCart Grid.Row="2" Margin="46,48,54,27" x:Name="hotvars" Grid.Column="1" Grid.RowSpan="2" />
             <Rectangle Fill="{x:Null}" Grid.Row="2" Grid.RowSpan="2" Margin="26,10,36,10" RadiusX="20" RadiusY="20" Stretch="Fill" Stroke="#FFAAAAAA" StrokeThickness="2" Grid.Column="1" />
             <TextBlock Height="32" HorizontalAlignment="Left" Margin="46,15,0,0" Style="{StaticResource BannerInlayTextBlue}" Text="Variables cart" VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" />
             <TextBlock Height="32" HorizontalAlignment="Left" Margin="40,0,0,0" Style="{StaticResource BannerInlayTextLime}" Text="Slides cart" VerticalAlignment="Top" Grid.Row="1" />
-            <StackPanel Height="41" Margin="26,122,8,0" Orientation="Horizontal" VerticalAlignment="Top" Grid.Row="2">
+            <StackPanel Height="41" Margin="26,110,8,0" Orientation="Horizontal" VerticalAlignment="Top" Grid.Row="2">
                 <TextBlock Style="{StaticResource BannerInlayText}" Text="Playout mode" VerticalAlignment="Center" FontSize="17" />
                 <Button Background="{StaticResource BlackBtn}" Click="Button_Click_5" Content="Manual" Foreground="White" Margin="5" />
                 <Button Background="{StaticResource BlackBtn}" Click="pmAutoBtn_Click" Content="Automatic" Foreground="White" Margin="5" />
                 <TextBlock Margin="10" Name="pmLabel" Style="{StaticResource BannerInlayTextBlue}" Text="Manual" TextAlignment="Center" VerticalAlignment="Center" />
             </StackPanel>
-            <TextBlock FontSize="17" Height="32" HorizontalAlignment="Left" Margin="28,85,0,0" Style="{StaticResource BannerInlayText}" Text="Current template: " VerticalAlignment="Top" Grid.Row="2" />
-            <TextBlock FontSize="17" Height="32" HorizontalAlignment="Left" Margin="180,85,0,0" Name="currentTemplateLabel" Style="{StaticResource BannerInlayTextLime}" Text="" VerticalAlignment="Top" Width="191" Grid.Row="2" />
-            <TextBlock FontSize="25" HorizontalAlignment="Right" Margin="0,0,61,136" Name="timerLabel" Style="{StaticResource BannerInlayTextRemain}" Text="00:00.0" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" />
-            <ProgressBar Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Margin="158,48,8,122" Name="timerProgressBar" Value="50" Grid.Row="2" />
+            <TextBlock FontSize="17" Height="32" HorizontalAlignment="Left" Margin="28,74,0,0" Style="{StaticResource BannerInlayText}" Text="Current template: " VerticalAlignment="Top" Grid.Row="2" />
+            <TextBlock FontSize="17" Height="32" HorizontalAlignment="Left" Margin="180,74,0,0" Name="currentTemplateLabel" Style="{StaticResource BannerInlayTextLime}" Text="" VerticalAlignment="Top" Width="191" Grid.Row="2" />
+            <TextBlock FontSize="25" HorizontalAlignment="Right" Margin="0,0,61,108" Name="timerLabel" Style="{StaticResource BannerInlayTextRemain}" Text="00:00.0" TextAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" />
+            <ProgressBar Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Red" Margin="158,48,8,0" Name="timerProgressBar" Value="50" Grid.Row="2" Height="10" VerticalAlignment="Top" />
             <TextBlock FontSize="25" Height="32" HorizontalAlignment="Left" Margin="28,26,0,0" Style="{StaticResource BannerInlayText}" Text="Next slide" VerticalAlignment="Top" Grid.Row="2" />
+            <Image x:Name="stationPic" HorizontalAlignment="Right" Margin="0,0,20,10" Width="202" Grid.Row="3" Stretch="Fill" Height="135" VerticalAlignment="Bottom" />
         </Grid>
         
         <Rectangle Fill="{x:Null}" Grid.Row="1" Grid.Column="2"  Margin="5,20,5,0" RadiusX="20" RadiusY="20" Stretch="Fill" Stroke="#FFAAAAAA" StrokeThickness="2" />

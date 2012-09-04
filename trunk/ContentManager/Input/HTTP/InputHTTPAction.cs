@@ -86,20 +86,23 @@ namespace ContentManager.Input.HTTP
             
 
             List<String> l = new List<String>();
-            foreach(KeyValuePair<String,String> t in dictionary){
-                if (t.Key.StartsWith("SLIDE") && core.slidegen.getAvailableSlides().Contains(t.Value))
-                {
-                    l.Add(t.Value);
-                    Console.WriteLine("New slide in cart: " + t.Value);
-                }
-                else
-                {
+            if (dictionary.Keys.Count != 0)
+            {
+                foreach(KeyValuePair<String,String> t in dictionary){
+                    if (t.Key.StartsWith("SLIDE") && core.slidegen.getAvailableSlides().Contains(t.Value))
+                    {
+                        l.Add(t.Value);
+                        Console.WriteLine("New slide in cart: " + t.Value);
+                    }
+                    else
+                    {
 
-                    return "UNKNOWN ARGUMENT : "+t.Key+" OR UNKNOWN SLIDE:"+t.Value;
+                        return "UNKNOWN ARGUMENT : "+t.Key+" OR UNKNOWN SLIDE:"+t.Value;
+                    }
                 }
+                if (l.Count == 0)
+                    return "BAD ARGUMENTS : SLIDE1 SLIDE2 etc..";
             }
-            if (l.Count == 0)
-                return "BAD ARGUMENTS : SLIDE1 SLIDE2 etc..";
 
             UIMain.Instance.Dispatcher.Invoke((Action)delegate()
             {
