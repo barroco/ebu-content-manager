@@ -102,6 +102,10 @@ namespace ContentManager.GUI
                 noFtpLabel2.Visibility = System.Windows.Visibility.Visible;
                 panel2.Background = Brushes.Maroon;
             }
+
+
+            if(CMSConfig.stationimage !="")
+                stationPic.Source = new BitmapImage(new Uri(CMSConfig.stationimage));
         }
 
 

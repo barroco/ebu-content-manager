@@ -56,6 +56,7 @@ namespace XMLConfig.CMS
 
         public static String dirwatch = "";
         public static int ep_quality=50;
+        public static String stationimage = "";
 
 
         // GLOBAL VARIABLES
@@ -87,6 +88,8 @@ namespace XMLConfig.CMS
             Console.WriteLine("imageheight = " + imageheight);
             Console.WriteLine("imagequality = " + imagequality);
             Console.WriteLine("ep_quality = " + ep_quality);
+
+            Console.WriteLine("stationimage = " + stationimage);
         
             Console.WriteLine();
             
@@ -242,6 +245,16 @@ namespace XMLConfig.CMS
                                         CMSConfig.ep_quality = Int32.Parse(reader.Value);
                                 }
                             }
+                            else if (reader.Name == "station")
+                            {
+                                while (reader.MoveToNextAttribute())
+                                {
+                                    if (reader.Name == "image")
+                                    {
+                                        CMSConfig.stationimage = reader.Value;
+                                    }
+                                }
+                            }
                             break;
                         case XmlNodeType.Text: //Display the text in each element.
 
@@ -373,6 +386,12 @@ namespace XMLConfig.CMS
 
                 }
 
+                w.WriteStartElement("station");
+                w.WriteStartAttribute("image");
+                w.WriteValue(CMSConfig.stationimage);
+                w.WriteEndElement();
+
+
                 w.WriteEndDocument();
                 w.Flush();
 
@@ -380,5 +399,6 @@ namespace XMLConfig.CMS
             }
 
         }
+
     }
 }
